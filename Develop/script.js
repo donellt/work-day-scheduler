@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $('.saveBtn').on('click', function() {
-        console.log("Save Button has been pressed!")
+        var newDesc = $(this).siblings('.description').val();
+        console.log(newDesc);
+        var taskTime = $(this).parent().attr('id');
+        console.log(taskTime);
     });
 });
