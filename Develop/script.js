@@ -9,9 +9,31 @@ $(document).ready(function() {
     function updateTime() {
         var currentHour = moment().hours();
         console.log(currentHour);
+
+    $('.time-block').each(function() {
+        var taskHour = parseInt($(this).attr('id'));
+
+        if (taskHour < currentHour) {
+            $(this).addClass('past')
+            $(this).removeClass('present');
+            $(this).removeClass('future');
+        } else if (taskHour === currentHour) {
+            $(this).addClass('present');
+            $(this).removeClass('past');
+            $(this).removeClass('future');
+        } else {
+            $(this).addClass('future')
+            $(this).removeClass('past')
+            $(this).removeClass('present')
+        }
+    });
     }
 
-    $("#currentDay").text(moment().format("dddd, MMMM Do"));
-
     updateTime();
+
+    var updateDelay = setInterval(updateTime, 10000);
+
+    $('#currentDay').text(moment().format('dddd, MMMM Do'));
+
+
 });
