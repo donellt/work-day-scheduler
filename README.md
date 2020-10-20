@@ -6,8 +6,16 @@
 
   ## Table of Contents 
   * [Description](#description)
+  * [Screenshot](#screenshot)
+  * [Deployed Application](#deployedapp)
   * [License](#license)
   * [Questions](#questions)
+  
+  ## Screenshot
+  ![Screenshot](screenshot.JPG)
+
+  ## Deployed Application
+  https://donellt.github.io/work-day-scheduler/
 
   ## License
   This project is licensed under the MIT license.
